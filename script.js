@@ -1,5 +1,4 @@
-
-        document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
             // Form and feedback elements
             const form = document.getElementById('registration-form');
             const feedbackDiv = document.getElementById('form-feedback');
@@ -67,19 +66,21 @@
                 }
                 
                 // Display feedback
-                feedbackDiv.style.display = 'block';
+                feedbackDiv.style.display = "block";
                 
                 if (isValid) {
                     // Success feedback
-                    feedbackDiv.textContent = 'Registration successful!';
-                    feedbackDiv.className = 'feedback-success';
+                    feedbackDiv.textContent = "Registration successful!";
+                    feedbackDiv.classList.add("feedback-success");
+                    feedbackDiv.style.color = "#28a745";
                     
                     // Reset form
                     form.reset();
                 } else {
                     // Error feedback
                     feedbackDiv.innerHTML = messages.join('<br>');
-                    feedbackDiv.className = 'feedback-error';
+                    feedbackDiv.classList.add("feedback-error");
+                    feedbackDiv.style.color = "#dc3545";
                 }
             });
             
@@ -95,4 +96,3 @@
                 }
             });
         });
-    
